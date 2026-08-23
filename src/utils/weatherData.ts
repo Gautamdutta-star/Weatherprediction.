@@ -15,10 +15,29 @@ export const getCurrentWeather = async (city: string): Promise<WeatherData> => {
   ];
   
   const randomWeather = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
+  const cityCountries: Record<string, string> = {
+  'Delhi': 'India',
+  'New Delhi': 'India',
+  'Mumbai': 'India',
+  'Bengaluru': 'India',
+  'Kolkata': 'India',
+  'Chennai': 'India',
+  'Hyderabad': 'India',
+  'Pune': 'India',
+  'Ahmedabad': 'India',
+  'Jaipur': 'India',
+  'Bhubaneswar': 'India',
+  'Patna': 'India',
+  'Kathmandu': 'Nepal',
+  'Pokhara': 'Nepal',
+  'Janakpur': 'Nepal",  
+};
+
+const country = cityCountries[city] || 'US';
   
   return {
     city,
-    country: 'US',
+    country: country,
     temperature: Math.floor(Math.random() * 40) + 50,
     condition: randomWeather.condition,
     description: randomWeather.description,
