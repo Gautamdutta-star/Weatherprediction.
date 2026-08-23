@@ -88,12 +88,47 @@ export const getWeatherAlerts = async (): Promise<WeatherAlert[]> => {
 
 export const searchCities = async (query: string): Promise<string[]> => {
   const cities = [
-    'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
-    'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose',
-    'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'Charlotte',
-    'San Francisco', 'Indianapolis', 'Seattle', 'Denver', 'Boston',
-    'El Paso', 'Detroit', 'Nashville', 'Portland', 'Memphis',
+    // India
+    'Delhi',
+    'New Delhi',
+    'Mumbai',
+    'Bengaluru',
+    'Kolkata',
+    'Chennai',
+    'Hyderabad',
+    'Pune',
+    'Ahmedabad',
+    'Jaipur',
+    'Bhubaneswar',
+    'Patna',
+    'Lucknow',
+    'Chandigarh',
+    'Kochi',
+
+    // Nepal
+    'Kathmandu',
+    'Pokhara',
+    'Lalitpur',
+    'Biratnagar',
+    'Janakpur',
+
+    // Other cities
+    'New York',
+    'Los Angeles',
+    'Chicago',
+    'Houston',
+    'Phoenix',
+    'Philadelphia',
+    'San Antonio',
+    'San Diego',
+    'Dallas',
+    'San Jose',
+    'San Francisco',
+    'Seattle',
+    'Denver',
+    'Boston',
   ];
+
   
   return cities.filter(city => 
     city.toLowerCase().includes(query.toLowerCase())
