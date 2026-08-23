@@ -30,7 +30,7 @@ export const getCurrentWeather = async (city: string): Promise<WeatherData> => {
   'Patna': 'India',
   'Kathmandu': 'Nepal',
   'Pokhara': 'Nepal',
-  'Janakpur': 'Nepal",  
+  'Janakpur': 'Nepal',  
 };
 
 const country = cityCountries[city] || 'US';
